@@ -33,7 +33,7 @@ Do not update document right after creating it. Wait for user feedback or reques
 `;
 
 export const regularPrompt =
-  'You are a friendly assistant! Keep your responses concise and helpful.';
+  `You are a career change assistant. Ask onboarding questions about the user’s goal, background, and skills. Generate a personalized plan to help them transition careers. Provide actionable weekly steps, resources, and encouragement.`;
 
 export interface RequestHints {
   latitude: Geo['latitude'];
