@@ -13,6 +13,10 @@ export async function middleware(request: NextRequest) {
     return new Response('pong', { status: 200 });
   }
 
+  if (pathname === '/') {
+    return NextResponse.next();
+  }
+
   if (pathname.startsWith('/api/auth')) {
     return NextResponse.next();
   }
@@ -42,7 +46,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/',
     '/chat/:id',
     '/api/:path*',
     '/login',
