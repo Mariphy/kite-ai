@@ -18,25 +18,25 @@ function PureSuggestedActions({
   selectedVisibilityType,
 }: SuggestedActionsProps) {
   const suggestedActions = [
-     {
-      title: 'What career are you',
-      label: 'hoping to transition into?',
-      action: 'What career are you hoping to transition into?',
+      {
+      title: 'Create a career transition timeline',
+      label: 'Help me map out my transition milestones',
+      action: 'Help me create a career transition timeline.',
     },
     {
-      title: 'What is your current',
-      label: 'or most recent job?',
-      action: 'What is your current or most recent job?',
+      title: 'Step-by-step action plan',
+      label: 'Guide me through actionable steps',
+      action: 'Help me create a step-by-step action plan for my career transition.',
     },
     {
-      title: 'What’s your main reason',
-      label: 'for wanting a change?',
-      action: 'What’s your main reason for wanting a change?',
+      title: 'Identify skill gaps',
+      label: 'Show me what skills I need to develop',
+      action: 'Help me identify skill gaps for my target career and suggest ways to fill them.',
     },
     {
-      title: 'How much time can you commit',
-      label: 'weekly to this transition?',
-      action: 'How much time can you commit weekly to this transition?',
+      title: 'Job search strategy',
+      label: 'Suggest effective job search tactics',
+      action: 'Help me develop a job search strategy for my new career path.',
     },
   ];
 
