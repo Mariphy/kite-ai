@@ -1,49 +1,10 @@
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
+import Header from '@/components/header.tsx';
 
 
 export default function HomePage() {
   return (
     <>
-      <header className="w-full bg-white shadow-md">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          {/* Logo placeholder */}
-          <div className="flex items-center">
-            <span className="text-xl font-bold">Logo</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>About</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <NavigationMenuLink>Link</NavigationMenuLink>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Free Resources</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <NavigationMenuLink>Link</NavigationMenuLink>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            <Button variant="secondary">Login</Button>
-            <Button>
-              Join us <span aria-hidden="true" className="font-bold">→</span>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header/>
       <main className="flex flex-col items-center justify-center min-h-screen">
         <div className="bg-stone-200 w-full h-screen flex flex-col items-center justify-center">
           <h1 className="text-4xl font-bold mb-4">Welcome to Kite AI!</h1>
