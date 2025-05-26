@@ -15,8 +15,8 @@ export default function Header() {
   return (
     <header className="w-full bg-white shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <div className="flex items-center p-2">
-          <Image src="/images/kite-logo.svg" alt="Kite AI Logo" width={80} height={80} className="mr-2" />
+        <div className="flex items-center p-4">
+          <Image src="/images/kite-logo.svg" alt="Kite AI Logo" width={60} height={60} className="mr-2" />
         </div>
         <div className="flex items-center gap-4">
           <NavigationMenu>
