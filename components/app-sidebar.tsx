@@ -28,7 +28,7 @@ export function AppSidebar({ user }: { user: User | undefined }) {
         <SidebarMenu>
           <div className="flex flex-row justify-between items-center">
             <Link
-              href="/"
+              href="/ai"
               onClick={() => {
                 setOpenMobile(false);
               }}
