@@ -1,15 +1,12 @@
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -29,9 +26,11 @@ export default function Header() {
               </NavigationMenuItem>     
             </NavigationMenuList>
           </NavigationMenu>
-          <Button variant="secondary">Login</Button>
-          <Button>
-            Join us <span aria-hidden="true" className="font-bold">→</span>
+          <Button variant="secondary" asChild>
+            <Link href="/login">Login</Link>
+          </Button>
+          <Button asChild>
+            <Link href="/register">Join us <span aria-hidden="true" className="font-bold">→</span></Link>
           </Button>
         </div>
       </div>

@@ -3,6 +3,7 @@ import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
 import Lottie from 'lottie-react';
 import kiteAnimation from '@/public/animations/movingkite.json';
+import Link from 'next/link'
 
 
 export default function HomePage() {
@@ -17,10 +18,12 @@ export default function HomePage() {
                 Join open projects, find volunteering network, chat with fellow career changers
               </p>
                 <div className="flex gap-4 mt-4">
-                <Button>
-                  Join us our community <span aria-hidden="true" className="font-bold">→</span>
+                <Button asChild>
+                  <Link href="/register"> Join us our community <span aria-hidden="true" className="font-bold">→</span></Link>
                 </Button>
-                <Button variant="secondary">More about Kite</Button>
+                <Button variant="secondary">
+                  <Link href="/about">More about Kite</Link>
+                </Button>
                 </div>
             </div>
             <div className="flex flex-col items-end justify-center p-8">
