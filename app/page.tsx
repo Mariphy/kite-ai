@@ -1,5 +1,8 @@
+"use client";
 import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
+import Lottie from 'lottie-react';
+import kiteAnimation from '@/public/animations/movingkite.json';
 
 
 export default function HomePage() {
@@ -21,7 +24,9 @@ export default function HomePage() {
                 </div>
             </div>
             <div className="flex flex-col items-end justify-center p-8">
-              <p>Sample text, more text to move the div, some more, more text, som more</p>
+              <div className="w-[400px] h-[200px]">
+                <Lottie animationData={kiteAnimation} loop={true} />
+              </div>
             </div>
           
         </div>
