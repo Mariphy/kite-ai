@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="w-full bg-white shadow-md">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="flex items-center justify-between p-4 sm:px-8 lg:px-16 xl:px-32">
         <div className="flex items-center p-4">
           <Image src="/images/kite-logo.svg" alt="Kite AI Logo" width={60} height={60} className="mr-2" />
         </div>
