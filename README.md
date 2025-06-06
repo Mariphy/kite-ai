@@ -36,3 +36,7 @@ Kite AI uses state-of-the-art language models to:
 2. Install dependencies:
    ```bash
    pnpm install
+
+## Project Link
+
+Find the Kite AI project on [https://kite-ai.vercel.app/](https://kite-ai.vercel.app/).
