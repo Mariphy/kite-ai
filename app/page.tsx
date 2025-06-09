@@ -44,21 +44,24 @@ export default function HomePage() {
                 description="We have a supportive community waiting for you on discord."
                 buttonTitle="Join discord"
                 icon={<Image src="/images/icon1.svg" alt="Team Icon" width={60} height={60} />}
+                buttonLink="https://discord.gg/nMpmpNnpYD"
               />
               <ServiceCard 
                 title="Create a plan with AI"
                 description="Confused  about where to start? Build a plan and track your progress with AI."
                 buttonTitle="Start now"
                 icon={<Image src="/images/icon2.svg" alt="Star Icon" width={60} height={60} />}
+                buttonLink="/ai"
               />
               <ServiceCard 
                 title="Resources"
                 description="Browse free resources that can help you in your transition."
                 buttonTitle="Start browsing"
                 icon={<Image src="/images/icon3.svg" alt="Care Icon" width={60} height={60} />}
+                buttonLink="/"
               />
             </div>
-            <div className="p-40 bg-slate-100"></div>
+            
         </div>
       </main>
     </>
