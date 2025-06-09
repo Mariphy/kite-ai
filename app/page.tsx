@@ -5,6 +5,7 @@ import Lottie from 'lottie-react';
 import kiteAnimation from '@/public/animations/movingkite.json';
 import Link from 'next/link';
 import ServiceCard from '@/components/service-card';
+import Image from 'next/image';
 
 
 export default function HomePage() {
@@ -34,14 +35,30 @@ export default function HomePage() {
             </div>
           
         </div>
-        <div className="bg-white w-full flex flex-col items-center justify-center">
+        <div className="bg-white flex flex-col items-center justify-between py-12 px-2 sm:px-0">
           <h2 className="text-3xl font-bold mt-4">How can we help you</h2>
-          <p className='p-2 mb-4'>Your next step toward brighter days!</p>
-            <div className="flex flex-row gap-6 overflow-x-auto w-full p-4 sm:px-0 sm:flex-nowrap flex-wrap sm:justify-center">
-              <ServiceCard />
-              <ServiceCard />
-              <ServiceCard />
+          <p className="p-2 mb-4">Your next step toward brighter days!</p>
+            <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center">
+              <ServiceCard 
+                title="Join our community"
+                description="We have a supportive community waiting for you on discord."
+                buttonTitle="Join discord"
+                icon={<Image src="/images/icon1.svg" alt="Team Icon" width={60} height={60} />}
+              />
+              <ServiceCard 
+                title="Create a plan with AI"
+                description="Confused  about where to start? Build a plan and track your progress with AI."
+                buttonTitle="Start now"
+                icon={<Image src="/images/icon2.svg" alt="Star Icon" width={60} height={60} />}
+              />
+              <ServiceCard 
+                title="Resources"
+                description="Browse free resources that can help you in your transition."
+                buttonTitle="Start browsing"
+                icon={<Image src="/images/icon3.svg" alt="Care Icon" width={60} height={60} />}
+              />
             </div>
+            <div className="p-40 bg-slate-100"></div>
         </div>
       </main>
     </>
