@@ -11,7 +11,6 @@ import Image from 'next/image';
 export default function HomePage() {
   return (
     <>
-      <Header/>
       <main className="flex flex-col items-center justify-center min-h-screen">
         <div className="bg-stone-200 w-full h-screen flex flex-col sm:flex-row items-center justify-between p-4 sm:px-8 lg:px-16 xl:px-32">
             <div className="flex flex-col sm:items-start items-center justify-center p-8">

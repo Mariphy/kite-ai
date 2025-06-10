@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 
 import './globals.css';
 import { SessionProvider } from 'next-auth/react';
+import Header from '@/components/header';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kite-ai.vercel.app/'),
@@ -71,6 +72,7 @@ export default async function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <Header />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
