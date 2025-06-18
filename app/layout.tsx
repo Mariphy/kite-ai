@@ -63,7 +63,6 @@ export default async function RootLayout({
       // prop is necessary to avoid the React hydration mismatch warning.
       // https://github.com/pacocoursey/next-themes?tab=readme-ov-file#with-app
       suppressHydrationWarning
-      className={`${geist.variable} ${geistMono.variable}`}
     >
       <head>
         <script
@@ -71,7 +70,7 @@ export default async function RootLayout({
             __html: THEME_COLOR_SCRIPT,
           }}
         />
-        
+        <link rel="stylesheet" href="https://use.typekit.net/uyv7hge.css" />
       </head>
       <body className="antialiased">
         <Header />
