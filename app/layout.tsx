@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 import { SessionProvider } from 'next-auth/react';
 import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kite-ai.vercel.app/'),
@@ -70,6 +71,7 @@ export default async function RootLayout({
             __html: THEME_COLOR_SCRIPT,
           }}
         />
+        
       </head>
       <body className="antialiased">
         <Header />
@@ -82,6 +84,7 @@ export default async function RootLayout({
           <Toaster position="top-center" />
           <SessionProvider>{children}</SessionProvider>
         </ThemeProvider>
+        <Footer />
       </body>
     </html>
   );
