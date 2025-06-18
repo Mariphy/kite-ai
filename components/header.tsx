@@ -12,9 +12,9 @@ export default function Header() {
   return (
     <header className="w-full bg-white shadow-md">
       <div className="flex items-center justify-between p-4 sm:px-8 lg:px-16 xl:px-32">
-        <div className="flex items-center p-4">
+        <Link href="/" className="flex items-center p-4">
           <Image src="/images/kite-logo.svg" alt="Kite AI Logo" width={60} height={60} className="mr-2" />
-        </div>
+        </Link>
         <div className="flex items-center gap-4">
           <NavigationMenu>
             <NavigationMenuList>
