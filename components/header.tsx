@@ -11,8 +11,15 @@ import Link from "next/link";
 import { useState } from "react";
 import { signOut } from "next-auth/react";
 import { Dialog } from "@headlessui/react";
+import type { UserType } from "@/app/(auth)/auth";
 
-export default function Header({ user }: { user?: { email?: string } }) {
+type HeaderUser = {
+  id?: string;
+  email?: string | null;
+  type: UserType;
+};
+
+export default function Header({ user }: { user?: HeaderUser }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <header className="w-full bg-white shadow-md">
