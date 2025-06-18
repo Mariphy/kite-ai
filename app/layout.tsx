@@ -7,6 +7,7 @@ import './globals.css';
 import { SessionProvider } from 'next-auth/react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import { auth } from '@/app/(auth)/auth';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kite-ai.vercel.app/'),
@@ -55,6 +56,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const session = await auth();
+
   return (
     <html
       lang="en"
@@ -73,7 +77,7 @@ export default async function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/uyv7hge.css" />
       </head>
       <body className="antialiased">
-        <Header />
+        <Header user={session?.user} />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
