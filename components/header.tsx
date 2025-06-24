@@ -25,7 +25,7 @@ export default function Header({ user }: { user?: HeaderUser }) {
     <header className="w-full bg-white shadow-md">
       <div className="flex items-center justify-between p-4 sm:px-8 lg:px-16 xl:px-32">
         <Link href="/" className="flex items-center p-4">
-          <Image src="/images/kite-logo.svg" alt="Kite AI Logo" width={60} height={60} className="mr-2" />
+          <Image src="/images/kite-logo.svg" alt="Kite AI Logo" width={78} height={36} className="mr-2" />
         </Link>
         <div className="hidden md:flex items-center gap-4">
           <NavigationMenu>
