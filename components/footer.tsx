@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="w-full bg-white shadow-md mt-auto">
       <div className="flex items-center justify-between p-4 sm:px-8 lg:px-16 xl:px-32">
         <div className="flex-1 flex justify-start">
-          <Link href="https://discord.gg/nMpmpNnpYD" target="_blank" rel="noopener noreferrer">
-            Feel free to reach out on <strong>discord</strong>
+          <Link href="mailto:kiteAIapp@gmail.com" target="_blank" rel="noopener noreferrer">
+            Feel free to reach out <strong>via email</strong>
           </Link>
         </div>
         <div className="flex-1 flex justify-end">
