@@ -1,5 +1,5 @@
 "use client";
-import Header from '@/components/header';
+
 import { Button } from '@/components/ui/button';
 import Lottie from 'lottie-react';
 import kiteAnimation from '@/public/animations/movingkite.json';
@@ -7,7 +7,7 @@ import Link from 'next/link';
 import ServiceCard from '@/components/service-card';
 import StoryCard from '@/components/story-card';
 import Image from 'next/image';
-import { url } from 'inspector';
+import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 
 
 export default function HomePage() {
@@ -120,6 +120,34 @@ export default function HomePage() {
               url="https://2hourjobsearch.com/"
             />
           </div>  
+        </div>
+
+        <div className="w-full bg-black flex flex-col items-center text-center justify-between py-12 px-2 sm:px-0">
+          <h2 className="text-3xl text-white md:text-5xl mt-4">New Features Coming Soon</h2>
+          <p className="text-xl text-white p-2 mb-4">Kite team is working on bringing new features to help you with your job search. </p>
+        </div>  
+
+        <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center">
+          <div className="flex items-center">
+            <Card>
+              <CardHeader>
+                <p className="text-sm text-gray-500 mb-2">CONTACT US</p>
+                <CardTitle>Do you want to share your story?</CardTitle>
+                <CardDescription>Have any suggestions or do you want to share your career transition? We’d love to hear from you. </CardDescription>
+              </CardHeader>
+              <CardFooter className="flex gap-2">
+                <Button asChild>
+                  <a href="mailto:kiteAIapp@gmail.com">Contact us</a>
+                </Button>
+                <Button variant="secondary" asChild>
+                  <a href="https://discord.gg/nMpmpNnpYD">Share on discord</a>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+          <div>
+            <Image src="/images/careers.svg" alt="Careers" width={600} height={400} className="w-full h-auto object-cover" />
+          </div>
         </div>
       </main>
     </>
