@@ -3,11 +3,26 @@
 @tailwind utilities;
 
 body {
-  font-family: "halyard-display", sans-serif;
+  font-family: "halyard-display", var(--font-inter), sans-serif;
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* Headings use Halyard Display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "halyard-display", sans-serif;
+}
+
+/* Paragraphs and body text use Inter */
+p, span, div, a, li, td, th {
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Override for specific elements that should keep Halyard */
+.font-halyard {
+  font-family: "halyard-display", sans-serif;
 }
 
 :root {

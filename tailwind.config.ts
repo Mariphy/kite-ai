@@ -10,8 +10,11 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-geist)'],
+        sans: ['halyard-display', 'var(--font-inter)', 'sans-serif'], // Default sans with fallback to Inter
         mono: ['var(--font-geist-mono)'],
+        inter: ['var(--font-inter)', 'sans-serif'], // Inter for paragraphs
+        halyard: ['halyard-display', 'sans-serif'], // Halyard for headings
+        geist: ['var(--font-geist)', 'sans-serif'], // Geist available for specific use cases
       },
       screens: {
         'toast-mobile': '600px',
