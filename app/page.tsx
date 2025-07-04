@@ -23,7 +23,7 @@ export default function HomePage() {
               </p>
                 <div className="flex gap-4 mt-4">
                 <Button asChild>
-                  <Link href="/register"> Join our community <span aria-hidden="true">→</span></Link>
+                  <Link href="/register"> Join our community <Image src="/images/button_arrow.svg" alt="Arrow" width={24} height={24} /></Link>
                 </Button>
                 <Button variant="secondary">
                   <Link href="/about">More about Kite</Link>
