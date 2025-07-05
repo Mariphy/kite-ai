@@ -37,6 +37,11 @@ export async function middleware(request: NextRequest) {
 
   const isGuest = guestRegex.test(token?.email ?? '');
 
+  // Block guests from accessing /ai route
+  if (isGuest && pathname === '/ai') {
+    return NextResponse.redirect(new URL('/login', request.url));
+  }
+
   if (token && !isGuest && ['/login', '/register'].includes(pathname)) {
     return NextResponse.redirect(new URL('/ai', request.url));
   }

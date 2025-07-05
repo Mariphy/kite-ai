@@ -80,6 +80,13 @@ export async function POST(request: Request) {
       return new Response('Unauthorized', { status: 401 });
     }
 
+    // Block guests from using AI chat
+    if (session.user.type === 'guest') {
+      return new Response('Please sign up or log in to use the AI chat feature.', { 
+        status: 403 
+      });
+    }
+
     const userType: UserType = session.user.type;
 
     const messageCount = await getMessageCountByUserId({
