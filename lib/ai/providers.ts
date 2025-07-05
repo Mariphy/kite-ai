@@ -39,7 +39,7 @@ const qwen2ChatModel = {
       const chatCompletion = await client.chatCompletion({
         model: "Qwen/Qwen2-7B-Instruct",
         messages: formattedMessages,
-        max_tokens: 150,
+        max_tokens: 500,
         temperature: 0.7,
         top_p: 0.9,
       });
@@ -54,16 +54,19 @@ const qwen2ChatModel = {
     } catch (error) {
       console.error('Qwen2 API error:', error);
       
+      // Type guard to check if error has a message property
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      
       // Handle specific error types
-      if (error.message?.includes('Rate limit')) {
+      if (errorMessage.includes('Rate limit')) {
         return {
           text: "I'm receiving too many requests right now. Please try again in a moment.",
         };
-      } else if (error.message?.includes('unauthorized') || error.message?.includes('authentication')) {
+      } else if (errorMessage.includes('unauthorized') || errorMessage.includes('authentication')) {
         return {
           text: "There's an authentication issue. Please check the API configuration.",
         };
-      } else if (error.message?.includes('model')) {
+      } else if (errorMessage.includes('model')) {
         return {
           text: "The AI model is currently unavailable. Please try again later.",
         };
