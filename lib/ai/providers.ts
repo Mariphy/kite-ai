@@ -39,7 +39,7 @@ const qwen2ChatModel = {
       const chatCompletion = await client.chatCompletion({
         model: "Qwen/Qwen2-7B-Instruct",
         messages: formattedMessages,
-        max_tokens: 150,
+        max_tokens: 500,
         temperature: 0.7,
         top_p: 0.9,
       });
