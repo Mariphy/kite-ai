@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { getToken } from 'next-auth/jwt';
-import { guestRegex, isDevelopmentEnvironment } from './lib/constants';
+import { isDevelopmentEnvironment } from './lib/constants';
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -13,33 +13,30 @@ export async function middleware(request: NextRequest) {
     return new Response('pong', { status: 200 });
   }
 
+  // Define public paths that don't require authentication
   const publicPaths = ['/', '/about', '/resources', '/login', '/register'];
   const isPublicRoute = publicPaths.includes(pathname) || pathname.startsWith('/api/auth');
 
-  if (isPublicRoute) return NextResponse.next();
+   // Allow public routes to pass through without token check
+  if (isPublicRoute) {
+    return NextResponse.next();
+  }
 
+  // Get authentication token
   const token = await getToken({
     req: request,
     secret: process.env.AUTH_SECRET,
     secureCookie: !isDevelopmentEnvironment,
   });
-  console.log('TOKEN:', token);
 
-  const isProtectedRoute = pathname.startsWith('/ai');
-
-  if (!token && isProtectedRoute) {
+  if (!token) {
     const redirectUrl = encodeURIComponent(request.url);
-    return NextResponse.redirect(new URL(`/api/auth/guest?redirectUrl=${redirectUrl}`, request.url));
+    return NextResponse.redirect(new URL(`/login?redirect=${redirectUrl}`, request.url));
   }
+  console.log('Middleware token:', token?.email);
 
-  const isGuest = guestRegex.test(token?.email ?? '');
-
-  // Block guests from accessing /ai route
-  if (isGuest && isProtectedRoute) {
-    return NextResponse.redirect(new URL('/login', request.url));
-  }
-
-  if (token && !isGuest && ['/login', '/register'].includes(pathname)) {
+  // Redirect authenticated users away from auth pages
+  if (token && ['/login', '/register'].includes(pathname)) {
     return NextResponse.redirect(new URL('/ai', request.url));
   }
 
@@ -48,10 +45,21 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+    '/ai',
     '/chat/:id',
     '/api/:path*',
     '/login',
     '/register',
-    '/ai/:path*'
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api/auth (NextAuth.js routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - images (public images)
+     * - animations (public animations)
+     * - files with extensions (static assets)
+     */
+    '/((?!api/auth|_next/static|_next/image|favicon.ico|images|animations|.*\\.).*)',
   ],
 };

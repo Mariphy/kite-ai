@@ -10,13 +10,8 @@ import { redirect } from 'next/navigation';
 export default async function Page() {
   const session = await auth();
 
-  // Redirect if no session
+  // Redirect if no session (middleware should handle this, but adding as failsafe)
   if (!session) {
-    redirect('/login');
-  }
-
-  // Redirect if user is a guest
-  if (session.user.type === 'guest') {
     redirect('/login');
   }
 
