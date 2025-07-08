@@ -13,32 +13,29 @@ export async function middleware(request: NextRequest) {
     return new Response('pong', { status: 200 });
   }
 
-  if (pathname === '/') {
-    return NextResponse.next();
-  }
+  const publicPaths = ['/', '/about', '/resources', '/login', '/register'];
+  const isPublicRoute = publicPaths.includes(pathname) || pathname.startsWith('/api/auth');
 
-  if (pathname.startsWith('/api/auth')) {
-    return NextResponse.next();
-  }
+  if (isPublicRoute) return NextResponse.next();
 
   const token = await getToken({
     req: request,
     secret: process.env.AUTH_SECRET,
     secureCookie: !isDevelopmentEnvironment,
   });
+  console.log('TOKEN:', token);
 
-  if (!token) {
+  const isProtectedRoute = pathname.startsWith('/ai');
+
+  if (!token && isProtectedRoute) {
     const redirectUrl = encodeURIComponent(request.url);
-
-    return NextResponse.redirect(
-      new URL(`/api/auth/guest?redirectUrl=${redirectUrl}`, request.url),
-    );
+    return NextResponse.redirect(new URL(`/api/auth/guest?redirectUrl=${redirectUrl}`, request.url));
   }
 
   const isGuest = guestRegex.test(token?.email ?? '');
 
   // Block guests from accessing /ai route
-  if (isGuest && pathname === '/ai') {
+  if (isGuest && isProtectedRoute) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
 
@@ -55,14 +52,6 @@ export const config = {
     '/api/:path*',
     '/login',
     '/register',
-    '/ai',
-
-    /*
-     * Match all request paths except for the ones starting with:
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico, sitemap.xml, robots.txt (metadata files)
-     */
-    '/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|$).*)',
+    '/ai/:path*'
   ],
 };
