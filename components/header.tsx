@@ -91,7 +91,7 @@ export default function Header({ user }: { user?: HeaderUser }) {
               </Link>
             ))}
             <div className="pt-4 space-y-2 border-t">
-              {user && user.type !== "guest" ? (
+              {user ? (
                 <Button 
                   variant="secondary" 
                   className="w-full" 
