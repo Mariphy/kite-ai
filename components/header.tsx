@@ -47,7 +47,7 @@ export default function Header({ user }: { user?: HeaderUser }) {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-           {user && user.type !== "guest" ? (
+           {user ? (
               <Button variant="secondary" onClick={() => signOut({ callbackUrl: "/" })}>
                 Logout
               </Button>

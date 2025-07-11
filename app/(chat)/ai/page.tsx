@@ -11,7 +11,7 @@ export default async function Page() {
   const session = await auth();
 
   if (!session) {
-    redirect('/api/auth/guest');
+    redirect('/login');
   }
 
   const id = generateUUID();
@@ -29,7 +29,7 @@ export default async function Page() {
           initialChatModel={DEFAULT_CHAT_MODEL}
           initialVisibilityType="private"
           isReadonly={false}
-          session={session}
+          session={session!}
           autoResume={false}
         />
         <DataStreamHandler id={id} />
@@ -46,7 +46,7 @@ export default async function Page() {
         initialChatModel={modelIdFromCookie.value}
         initialVisibilityType="private"
         isReadonly={false}
-        session={session}
+        session={session!}
         autoResume={false}
       />
       <DataStreamHandler id={id} />
