@@ -10,7 +10,6 @@ import { redirect } from 'next/navigation';
 export default async function Page() {
   const session = await auth();
 
-  // Redirect if no session (middleware should handle this, but adding as failsafe)
   if (!session) {
     redirect('/login');
   }
@@ -30,7 +29,7 @@ export default async function Page() {
           initialChatModel={DEFAULT_CHAT_MODEL}
           initialVisibilityType="private"
           isReadonly={false}
-          session={session}
+          session={session!}
           autoResume={false}
         />
         <DataStreamHandler id={id} />
@@ -47,7 +46,7 @@ export default async function Page() {
         initialChatModel={modelIdFromCookie.value}
         initialVisibilityType="private"
         isReadonly={false}
-        session={session}
+        session={session!}
         autoResume={false}
       />
       <DataStreamHandler id={id} />

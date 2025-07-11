@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useActionState, useEffect, useState, useCallback } from 'react';
+import { useActionState, useEffect, useState } from 'react';
 import { toast } from '@/components/toast';
 
 import { AuthForm } from '@/components/auth-form';
@@ -26,11 +26,6 @@ export default function Page() {
 
   const { update: updateSession } = useSession();
 
-  // Wrap updateSession in useCallback to make it stable
-  const stableUpdateSession = useCallback(() => {
-    updateSession();
-  }, [updateSession]);
-
   useEffect(() => {
     if (state.status === 'failed') {
       toast({
@@ -44,10 +39,10 @@ export default function Page() {
       });
     } else if (state.status === 'success') {
       setIsSuccessful(true);
-      stableUpdateSession();
-      router.refresh();
+      updateSession();
+      router.push('/ai');
     }
-  }, [state.status, stableUpdateSession, router]);
+  }, [state.status]);
 
   const handleSubmit = (formData: FormData) => {
     setEmail(formData.get('email') as string);
