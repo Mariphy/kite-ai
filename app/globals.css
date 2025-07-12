@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-halyard: "halyard-display", "Halyard Display", sans-serif;
+}
+
 body {
   font-family: "halyard-display", var(--font-inter), sans-serif;
   font-weight: 500;

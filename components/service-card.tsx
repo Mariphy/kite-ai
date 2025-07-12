@@ -17,7 +17,7 @@ export default function ServiceCard({title, description, buttonTitle, icon, butt
                     <div>
                         {icon}
                     </div>
-                    <CardTitle>{title}</CardTitle>
+                    <CardTitle className='text-heading-md font-halyard'>{title}</CardTitle>
                     <CardDescription>{description}</CardDescription>
                 </CardHeader>
                 <CardFooter>

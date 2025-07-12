@@ -10,9 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['halyard-display', 'var(--font-inter)', 'sans-serif'], // Default sans with fallback to Inter
+        sans: ['var(--font-inter)', 'sans-serif'], // Inter as default
         inter: ['var(--font-inter)', 'sans-serif'], // Inter for paragraphs
-        halyard: ['halyard-display', 'sans-serif'], // Halyard for headings
+        halyard: ['var(--font-halyard)', 'sans-serif'], // Halyard for headings (using CSS variable)
       },
       fontSize: {
         // Custom font sizes with line heights based on your globals.css
