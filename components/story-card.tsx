@@ -21,7 +21,7 @@ export default function StoryCard({
           {image}
         </div>
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className="text-heading-md font-halyard">{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
         </CardHeader>
         <CardFooter>
