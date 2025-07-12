@@ -12,32 +12,28 @@ body {
 
 h1 {
   font-family: "halyard-display", sans-serif;
-  font-size: 3.75rem; /* 60px */
-  line-height: 120%; /* 1.2 */
+  @apply text-heading-xl;
 }
 
 h2 {
   font-family: "halyard-display", sans-serif;
-  font-size: 2.875rem; 
-  line-height: 130%; 
-  letter-spacing: -1%;
+  @apply text-heading-lg;
 }
 
 h3 {
   font-family: "halyard-display", sans-serif;
-  font-size: 1.5rem; 
-  line-height: 130%; 
+  @apply text-heading-md;
 }
 
 h4 {
   font-family: "halyard-display", sans-serif;
-  font-size: 1.125rem; 
-  line-height: 130%; 
+  @apply text-heading-sm;
 }
 
 /* Paragraphs and body text use Inter */
 p, span, div, a, li, td, th {
   font-family: var(--font-inter), sans-serif;
+  @apply text-body;
 }
 
 /* Override for specific elements that should keep Halyard */

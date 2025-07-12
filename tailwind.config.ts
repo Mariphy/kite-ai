@@ -11,10 +11,17 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['halyard-display', 'var(--font-inter)', 'sans-serif'], // Default sans with fallback to Inter
-        mono: ['var(--font-geist-mono)'],
         inter: ['var(--font-inter)', 'sans-serif'], // Inter for paragraphs
         halyard: ['halyard-display', 'sans-serif'], // Halyard for headings
-        geist: ['var(--font-geist)', 'sans-serif'], // Geist available for specific use cases
+      },
+      fontSize: {
+        // Custom font sizes with line heights based on your globals.css
+        'heading-xl': ['3.75rem', { lineHeight: '1.2' }], // h1: 60px with 120% line-height
+        'heading-lg': ['2.875rem', { lineHeight: '1.3', letterSpacing: '-1%' }], // h2: with 130% line-height and -1% letter-spacing
+        'heading-md': ['1.5rem', { lineHeight: '1.3' }], // h3: 24px with 130% line-height
+        'heading-sm': ['1.125rem', { lineHeight: '1.3' }], // h4: 18px with 130% line-height
+        'body': ['1.125rem', { lineHeight: '1.4' }], // p, span, div, a, li, td, th: 18px with 140% line-height
+        'button': ['1rem', { lineHeight: '1.3' }], // Button text: 16px with 130% line-height
       },
       screens: {
         'toast-mobile': '600px',

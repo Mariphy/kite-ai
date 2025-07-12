@@ -39,7 +39,7 @@ export default function Header({ user }: { user?: HeaderUser }) {
                 <NavigationMenuItem key={item.name}>
                   <NavigationMenuLink 
                     href={item.href} 
-                    className="px-4 py-2 rounded-md hover:bg-gray-100 transition font-normal"
+                    className="px-4 py-2 rounded-md hover:bg-gray-100 transition text-button font-medium"
                   >
                     {item.name}
                   </NavigationMenuLink>
