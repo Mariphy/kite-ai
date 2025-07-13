@@ -27,7 +27,7 @@ export default function Header({ user }: { user?: HeaderUser }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   return (
-    <header className="w-full bg-white shadow-md">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-md">
       <div className="flex items-center justify-between py-4 px-7 md:py-6 md:px-12 lg:px-20 xl:px-24">
         <Link href="/" className="flex items-center">
           <Image src="/images/kite-logo.svg" alt="Kite AI Logo" width={78} height={36} className="mr-2" />
