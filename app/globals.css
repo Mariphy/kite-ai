@@ -37,7 +37,6 @@ h4 {
 /* Paragraphs and body text use Inter */
 p, span, div, a, li, td, th {
   font-family: var(--font-inter), sans-serif;
-  @apply text-body;
 }
 
 /* Override for specific elements that should keep Halyard */
