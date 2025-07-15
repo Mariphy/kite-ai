@@ -8,7 +8,6 @@
 
 body {
   font-family: "halyard-display", var(--font-inter), sans-serif;
-  font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -16,21 +15,25 @@ body {
 
 h1 {
   font-family: "halyard-display", sans-serif;
+  font-weight: 500;
   @apply text-heading-xl;
 }
 
 h2 {
   font-family: "halyard-display", sans-serif;
+  font-weight: 500;
   @apply text-heading-lg;
 }
 
 h3 {
   font-family: "halyard-display", sans-serif;
+  font-weight: 500;
   @apply text-heading-md;
 }
 
 h4 {
   font-family: "halyard-display", sans-serif;
+  font-weight: 500;
   @apply text-heading-sm;
 }
 
