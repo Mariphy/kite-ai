@@ -15,7 +15,7 @@ export default function HomePage() {
     <>
       <main className="flex flex-col items-center justify-center min-h-screen">
 
-        <div className="bg-[#F6F2EF] w-full h-dvh flex flex-col sm:flex-row items-center justify-between p-4 sm:px-8 lg:px-16 xl:px-32">
+        <section className="bg-[#F6F2EF] w-full h-dvh flex flex-col sm:flex-row items-center justify-between p-4 sm:px-8 lg:px-20 xl:px-32">
             <div className="flex flex-col sm:items-start items-center justify-center p-8">
               <h1 className="text-4xl md:text-6xl mb-6">Let&#39;s make career change easier, together.</h1>
               <p className="text-body text-gray-600 mb-8">
@@ -23,7 +23,7 @@ export default function HomePage() {
               </p>
                 <div className="flex gap-4 mt-4">
                 <Button asChild>
-                  <Link href="/register"> Join our community <Image src="/images/button_arrow.svg" alt="Arrow" width={22} height={22} /></Link>
+                  <Link href="/register"> Join our community <Image src="/images/button_arrow.svg" alt="Arrow" width={20} height={20} /></Link>
                 </Button>
                 <Button variant="outline">
                   <Link href="/about">More about Kite</Link>
@@ -35,7 +35,7 @@ export default function HomePage() {
                 <Lottie animationData={kiteAnimation} loop={true} />
               </div>
             </div>
-        </div>
+        </section>
 
         <div className="bg-white flex flex-col items-center justify-between py-12 px-2 sm:px-0">
           <div className="py-8 px-47 text-center">
