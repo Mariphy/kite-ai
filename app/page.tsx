@@ -15,7 +15,7 @@ export default function HomePage() {
     <>
       <main className="flex flex-col items-center justify-center min-h-screen">
 
-        <div className="bg-[#F6F2EF] w-full h-screen flex flex-col sm:flex-row items-center justify-between p-4 sm:px-8 lg:px-16 xl:px-32">
+        <div className="bg-[#F6F2EF] w-full h-dvh flex flex-col sm:flex-row items-center justify-between p-4 sm:px-8 lg:px-16 xl:px-32">
             <div className="flex flex-col sm:items-start items-center justify-center p-8">
               <h1 className="text-4xl md:text-6xl mb-6">Let&#39;s make career change easier, together.</h1>
               <p className="text-body text-gray-600 mb-8">
@@ -23,9 +23,9 @@ export default function HomePage() {
               </p>
                 <div className="flex gap-4 mt-4">
                 <Button asChild>
-                  <Link href="/register"> Join our community <Image src="/images/button_arrow.svg" alt="Arrow" width={24} height={24} /></Link>
+                  <Link href="/register"> Join our community <Image src="/images/button_arrow.svg" alt="Arrow" width={22} height={22} /></Link>
                 </Button>
-                <Button variant="secondary">
+                <Button variant="outline">
                   <Link href="/about">More about Kite</Link>
                 </Button>
                 </div>
@@ -109,7 +109,7 @@ export default function HomePage() {
               image={<Image src="/images/job-moves.svg" alt="Job Moves book cover" width={320} height={180} className="rounded-t-lg"/>}
               title="Job Moves"
               description="Ethan Bernstein, Michael B. Horn, Bob Moesta"
-              url=""
+              url="https://www.jobmoves.com/"
             />
             <StoryCard 
               image={<Image src="/images/designing.svg" alt="Designing Your Life book cover" width={320} height={180} className="rounded-t-lg"/>}

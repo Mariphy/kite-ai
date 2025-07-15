@@ -57,7 +57,7 @@ export default function Header({ user }: { user?: HeaderUser }) {
                   <Link href="/login">Login</Link>
                 </Button>
                 <Button asChild>
-                  <Link href="/register">Join us <Image src="/images/button_arrow.svg" alt="Arrow" width={24} height={24} /></Link>
+                  <Link href="/register">Join us <Image src="/images/button_arrow.svg" alt="Arrow" width={22} height={22} /></Link>
                 </Button>
               </>
             )}
