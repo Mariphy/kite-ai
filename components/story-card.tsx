@@ -1,5 +1,4 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function StoryCard({
@@ -17,7 +16,7 @@ export default function StoryCard({
   return (
     <div className="p-2">
       <Card className="w-80 shrink-0 flex flex-col">
-        <div className="w-full flex justify-center items-center pt-4">
+        <div className="w-full flex justify-center items-center">
           {image}
         </div>
         <CardHeader>
