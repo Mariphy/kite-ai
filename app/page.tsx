@@ -15,10 +15,10 @@ export default function HomePage() {
     <>
       <main className="flex flex-col items-center justify-center min-h-screen">
 
-        <div className="bg-stone-200 w-full h-screen flex flex-col sm:flex-row items-center justify-between p-4 sm:px-8 lg:px-16 xl:px-32">
+        <div className="bg-[#F6F2EF] w-full h-screen flex flex-col sm:flex-row items-center justify-between p-4 sm:px-8 lg:px-16 xl:px-32">
             <div className="flex flex-col sm:items-start items-center justify-center p-8">
               <h1 className="text-4xl md:text-6xl mb-6">Let&#39;s make career change easier, together.</h1>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-body text-gray-600 mb-8">
                 Join open projects, find volunteering network, chat with fellow career changers
               </p>
                 <div className="flex gap-4 mt-4">
@@ -38,9 +38,11 @@ export default function HomePage() {
         </div>
 
         <div className="bg-white flex flex-col items-center justify-between py-12 px-2 sm:px-0">
-          <h2 className="text-3xl md:text-5xl mt-4">How can we help you</h2>
-          <p className="text-xl p-2 mb-4">Your next step toward brighter days!</p>
-            <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center">
+          <div className="py-8 px-47 text-center">
+            <h2 className="text-3xl md:text-5xl mb-4">How can we help you</h2>
+            <p className="text-base">Your next step toward brighter days!</p>
+          </div>
+          <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center">
               <ServiceCard 
                 title="Join our community"
                 description="We have a supportive community waiting for you on discord."
@@ -66,26 +68,28 @@ export default function HomePage() {
         </div>
 
         <div className="bg-white flex flex-col items-center justify-between py-12 px-2 sm:px-0">
-          <h2 className="text-3xl md:text-5xl mt-4">Transition Stories</h2>
-          <p className="text-xl p-2 mb-4">Real stories of bold career moves and fresh starts.</p>
+          <div className="py-8 px-47 text-center">
+            <h2 className="text-3xl md:text-5xl mb-4">Transition Stories</h2>
+            <p className="text-base">Real stories of bold career moves and fresh starts.</p>
+          </div>
           <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center">
             <StoryCard 
-              image={<Image src="/images/story_placeholder.svg" alt="Placeholder Picture" width={320} height={180} className="rounded-t-lg"/>}
+              image={<Image src="/images/biology.svg" alt="Graphic depicting a microscope and a graph" width={320} height={180} className="rounded-t-lg"/>}
               title="My Journey From Biology to Biostatistics"
               description="Eliana Ibrahimi"
-              url="medium.com"
+              url="https://medium.com/stats-learning/my-journey-from-biology-to-biostatistics-988bd23a2e29"
             />
             <StoryCard 
               image={<Image src="/images/story_placeholder.svg" alt="Placeholder Picture" width={320} height={180} className="rounded-t-lg"/>}
-              title="My Journey From Biology to Biostatistics"
-              description="Eliana Ibrahimi"
-              url="medium.com"
+              title="Jumping from a chemistry PhD to data science at Faire"
+              description="Sam Kenny"
+              url="https://craft.faire.com/jumping-from-a-chemistry-phd-to-data-science-at-faire-d67728cea436?gi=b94a5ecbaaff"
             />
             <StoryCard 
               image={<Image src="/images/story_placeholder.svg" alt="Placeholder Picture" width={320} height={180} className="rounded-t-lg"/>}
-              title="My Journey From Biology to Biostatistics"
-              description="Eliana Ibrahimi"
-              url="medium.com"
+              title="How I Went from Translator to Engineering Apprentice..."
+              description="Elizabeth Gardiner"
+              url="https://www.codecademy.com/resources/blog/from-translator-to-engineering-apprentice"
             />
           </div>
 
@@ -93,7 +97,7 @@ export default function HomePage() {
 
         <div className="bg-white flex flex-col items-center text-center justify-between py-12 px-2 sm:px-0">
           <h2 className="text-3xl md:text-5xl mt-4">Curated Books</h2>
-          <p className="text-xl p-2 mb-4">Not sure where to start? <br/>Check the books that helped other career changers most.</p>
+          <p className="text-base p-2 mb-4">Not sure where to start? <br/>Check the books that helped other career changers most.</p>
           <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center">
             <StoryCard 
               image={<Image src="/images/nsa.svg" alt="Never Search Alone book cover" width={320} height={180} className="rounded-t-lg"/>}
