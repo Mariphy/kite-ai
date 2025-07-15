@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white shadow-md mt-auto">
+    <footer className="w-full bg-[#F6F2EF] shadow-md mt-auto">
       <div className="flex items-center justify-between p-4 sm:px-8 lg:px-16 xl:px-32">
         <div className="flex-1 flex justify-start">
           <Link href="mailto:kiteAIapp@gmail.com" target="_blank" rel="noopener noreferrer">
