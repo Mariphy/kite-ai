@@ -15,7 +15,7 @@ export default function StoryCard({
   const isExternal = url.startsWith("http");
   return (
     <div className="p-2">
-      <Card className="w-80 shrink-0 flex flex-col">
+      <Card className="w-80 shrink-0 flex flex-col hover:-translate-y-2 hover:transition-all duration-300 ease-out cursor-pointer">
         <div className="w-full flex justify-center items-center">
           {image}
         </div>
