@@ -12,7 +12,7 @@ export default function ServiceCard({title, description, buttonTitle, icon, butt
     const isExternal = buttonLink.startsWith('http');
     return (
         <div className="p-2">
-            <Card className="w-80 shrink-0">
+            <Card className="w-80 shrink-0 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-out cursor-pointer">
                 <CardHeader>
                     <div>
                         {icon}
