@@ -56,6 +56,7 @@ export default function HomePage() {
                 buttonTitle="Start now"
                 icon={<Image src="/images/icon2.svg" alt="Star Icon" width={60} height={60} />}
                 buttonLink="/ai"
+                showBeta={true}
               />
               <ServiceCard 
                 title="Resources"

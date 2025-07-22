@@ -8,11 +8,16 @@ import { Card,
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-export default function ServiceCard({title, description, buttonTitle, icon, buttonLink}: {title: string, description: string, buttonTitle: string, icon: React.ReactNode, buttonLink: string}) {
+export default function ServiceCard({title, description, buttonTitle, icon, buttonLink, showBeta = false}: {title: string, description: string, buttonTitle: string, icon: React.ReactNode, buttonLink: string, showBeta?: boolean}) {
     const isExternal = buttonLink.startsWith('http');
     return (
         <div className="p-2">
-            <Card className="w-80 shrink-0 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-out cursor-pointer">
+            <Card className="w-80 shrink-0 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-out cursor-pointer relative">
+                {showBeta && (
+                    <div className="absolute top-2 right-2 bg-[#A4F4CF] text-black text-sm p-2 m-4 rounded-sm font-medium z-10">
+                        beta
+                    </div>
+                )}
                 <CardHeader>
                     <div>
                         {icon}
