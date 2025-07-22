@@ -130,6 +130,17 @@ export default function HomePage() {
         <div className="w-full bg-black flex flex-col items-center text-center justify-between py-12 px-2 sm:px-0">
           <h2 className="text-3xl text-white md:text-5xl mt-4">New Features Coming Soon</h2>
           <p className="text-xl text-white p-2 mb-4">Kite team is working on bringing new features to help you with your job search. </p>
+          <div className="flex justify-center w-full p-2">
+            <iframe 
+                width="80%" 
+                height="500" 
+                src="https://youtube.com/embed/eN60btQ-UpY" 
+                title="Kite App Demo" 
+                className="border-0 px-12"  
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen>
+            </iframe>
+          </div>
         </div>  
 
         <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center">
