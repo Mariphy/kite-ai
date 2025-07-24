@@ -3,3 +3,4 @@ onlyBuiltDependencies:
   - bufferutil
   - esbuild
   - sharp
+  - unrs-resolver
