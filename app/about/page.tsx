@@ -18,12 +18,23 @@ export default function AboutPage() {
         </div>
       </section>
       <section className="bg-[#F6F2EF] w-full h-20"></section>
-      <section className="p-4 items-center">
+      <section className="p-4 flex flex-col items-center">
         <h2 className="text-center p-4">Meet the Kite Team</h2>
-        <p className="text-2xl text-center pb-8">Our team is designing, developing Kite from scratch across India, Portugal and the US. </p>
-        <Image src="/images/map.svg" alt="Kite Team Map" width={600} height={400} className="p-4 items-center" />
+        <p className="text-2xl text-center pb-8 px-20">Our team is designing, developing Kite from scratch across India, Portugal and the US. </p>
+        <Image src="/images/map.svg" alt="Kite Team Map" width={900} height={500} className="py-4 px-20 items-center" />
       </section> 
-      <section className="bg-[#F6F2EF] w-full h-20"></section>
+      <section className="bg-[#F6F2EF] w-full py-8 px-4">
+        <div className="flex flex-row items-center gap-4 max-w-4xl mx-auto">
+          <Image src="/images/quote.svg" alt="Quote icon" width={24} height={24} className="flex-shrink-0 mt-1" />
+          <p className="text-lg text-gray-700">I wish I had a supportive space while I figure things out.</p>
+        </div>
+      </section>
+       <section className="p-4 items-center">
+        <div className='p-20'>
+          <h2 className="text-center py-8 px-44">Kite is shaped by you</h2>
+          <p className="text-2xl text-center pb-8 px-44">Kite is a new platform, if you are open to participate in our usability testing or have any ideas, we’d love to hear from you. </p>
+        </div>
+       </section>
     </main>
   );
 }
