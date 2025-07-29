@@ -75,19 +75,19 @@ export default function HomePage() {
           </div>
           <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center">
             <StoryCard 
-              image={<Image src="/images/biology.svg" alt="Graphic depicting a microscope and a graph" width={320} height={180} className="rounded-t-lg"/>}
+              image={<Image src="/images/biology.webp" alt="Picture depicting a microscope and a person using it in the background" width={320} height={180} className="rounded-t-lg"/>}
               title="My Journey From Biology to Biostatistics"
               description="Eliana Ibrahimi"
               url="https://medium.com/stats-learning/my-journey-from-biology-to-biostatistics-988bd23a2e29"
             />
             <StoryCard 
-              image={<Image src="/images/story_placeholder.svg" alt="Placeholder Picture" width={320} height={180} className="rounded-t-lg"/>}
+              image={<Image src="/images/chemistry.webp" alt="Hand in a glove holding a laboratory glassware and a pipette" width={320} height={180} className="rounded-t-lg"/>}
               title="Jumping from a chemistry PhD to data science at Faire"
               description="Sam Kenny"
               url="https://craft.faire.com/jumping-from-a-chemistry-phd-to-data-science-at-faire-d67728cea436?gi=b94a5ecbaaff"
             />
             <StoryCard 
-              image={<Image src="/images/story_placeholder.svg" alt="Placeholder Picture" width={320} height={180} className="rounded-t-lg"/>}
+              image={<Image src="/images/computer.webp" alt="A picture of a laptop with code snippet on the screen" width={320} height={180} className="rounded-t-lg"/>}
               title="How I Went from Translator to Engineering Apprentice..."
               description="Elizabeth Gardiner"
               url="https://www.codecademy.com/resources/blog/from-translator-to-engineering-apprentice"
