@@ -6,7 +6,7 @@ export default function AboutPage() {
         <h1 className="text-center mb-4 pt-8">About Kite</h1>
         <p className="text-2xl text-center pb-8">Kite is made by career changers for career changers.</p>
         <div className="flex flex-row px-20">
-          <div className="shrink-0 p-2 size-80">
+          <div className="shrink-0 p-2 size-90">
             <Image src="/images/about_graph.svg" alt="About Kite Graphic" width={600} height={400} className="p-4 items-left" />
           </div>
           <div className="flex-1">
