@@ -13,6 +13,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/comp
 export default function HomePage() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen">
+      {/* First Section */}
       <section className="bg-[#F6F2EF] flex flex-col lg:flex-row items-center justify-around p-0 md:px-12 md:py-14 lg:px-20 lg:py-24 xl:px-32 xl:py-32 w-full">
           <div className="flex flex-col items-center md:items-start justify-center px-7 py-10 md:p-8">
             <h1 className="text-4xl md:text-6xl mb-6 items-start">Let&#39;s make career change easier, together.</h1>
@@ -35,12 +36,13 @@ export default function HomePage() {
           </div>
       </section>
 
-      <section className="bg-white flex flex-col items-center justify-between py-12 px-0 md:px-2">
-        <div className="py-8 px-4 text-center">
-          <h2 className="text-3xl md:text-5xl mb-4">How can we help you</h2>
-          <p className="text-2xl">Your next step toward brighter days!</p>
+      {/* Services Section */}
+      <section className="bg-white flex flex-col items-center justify-between p-0 md:my-10 md:mx-2 lg:mt-10 lg:w-11/12">
+        <div className="mx-7 mt-10 text-center">
+          <h2 className="text-3xl pt-8 pb-6 md:text-5xl">How can we help you</h2>
+          <p className="pb-8 text-l md:text-2xl">Your next step toward brighter days!</p>
         </div>
-        <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center">
+        <div className="flex flex-col items-center justify-center flex-wrap md:flex-row overflow-hidden px-7 pb-10 md:mt-14">
             <ServiceCard 
               title="Join our community"
               description="We have a supportive community waiting for you on discord."
@@ -50,8 +52,8 @@ export default function HomePage() {
             />
             <ServiceCard 
               title="Create a plan with AI"
-              description="Confused  about where to start? Build a plan and track your progress with AI."
-              buttonTitle="Start now"
+              description="Help us develop this feature by trying out our beta version."
+              buttonTitle="Sign up to try"
               icon={<Image src="/images/icon2.svg" alt="Star Icon" width={60} height={60} />}
               buttonLink="/ai"
               showBeta={true}
@@ -63,15 +65,15 @@ export default function HomePage() {
               icon={<Image src="/images/icon3.svg" alt="Care Icon" width={60} height={60} />}
               buttonLink="/resources"
             />
-          </div>
+        </div>
       </section>
 
-      <section className="bg-white flex flex-col items-center justify-between py-12 px-0 md:px-2">
-        <div className="py-8 px-4 text-center">
+      <section className="bg-white flex flex-col items-center justify-between p-0 md:my-10 md:mx-2 lg:mt-10 lg:w-11/12">
+        <div className="mx-7 mt-10 text-center">
           <h2 className="text-3xl md:text-5xl mb-6">Transition Stories</h2>
-          <p className="text-2xl">Real stories of bold career moves and fresh starts.</p>
+          <p className="pb-8 text-l md:text-2xl">Real stories of bold career moves and fresh starts.</p>
         </div>
-        <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center">
+        <div className="flex flex-col items-center justify-center flex-wrap md:flex-row overflow-x-auto px-7 pb-10 md:mt-14">
           <StoryCard 
             image={<Image src="/images/biology.webp" alt="Picture depicting a microscope and a person using it in the background" width={320} height={180} className="rounded-t-lg"/>}
             title="My Journey From Biology to Biostatistics"
@@ -92,11 +94,11 @@ export default function HomePage() {
           />
         </div>
       </section>
-
-      <section className="bg-white flex flex-col items-center text-center justify-between py-12 px-0 md:px-2">
-        <h2 className="text-3xl md:text-5xl mt-4">Curated Books</h2>
-        <p className="text-2xl p-2 mb-4">Not sure where to start? <br/>Check the books that helped other career changers most.</p>
-        <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center">
+      {/*Books Section*/}
+      <section className="bg-white flex flex-col items-center text-center justify-between p-0 md:my-10 md:mx-2 lg:mt-10 lg:w-11/12">
+        <h2 className="text-3xl md:text-5xl mb-6">Curated Books</h2>
+        <p className="pb-8 text-l md:text-2xl">Not sure where to start? <br/>Check the books that helped other career changers most.</p>
+        <div className="flex flex-row p-4 overflow-x-auto sm:px-0 flex-wrap sm:justify-center lg:my-14">
           <StoryCard 
             image={<Image src="/images/nsa.svg" alt="Never Search Alone book cover" width={320} height={180} className="rounded-t-lg p-2"/>}
             title="Never Search Alone"
