@@ -1,7 +1,7 @@
 import { Toaster } from 'sonner';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@/components/theme-provider';
+//import { ThemeProvider } from '@/components/theme-provider';
 
 import './globals.css';
 import { SessionProvider } from 'next-auth/react';
@@ -25,7 +25,7 @@ const inter = Inter({
   display: 'swap',
   variable: '--font-inter',
 });
-
+/*
 const LIGHT_THEME_COLOR = 'hsl(0 0% 100%)';
 const DARK_THEME_COLOR = 'hsl(240deg 10% 3.92%)';
 const THEME_COLOR_SCRIPT = `\
@@ -45,7 +45,7 @@ const THEME_COLOR_SCRIPT = `\
   observer.observe(html, { attributes: true, attributeFilter: ['class'] });
   updateThemeColor();
 })();`;
-
+*/
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -64,24 +64,28 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/*
         <script
           dangerouslySetInnerHTML={{
             __html: THEME_COLOR_SCRIPT,
           }}
         />
+        */}
         <link rel="stylesheet" href="https://use.typekit.net/uyv7hge.css" />
       </head>
       <body className={`${inter.variable} antialiased`}>
         <Header user={session?.user} />
+        {/*
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+        */}
           <Toaster position="top-center" />
           <SessionProvider>{children}</SessionProvider>
-        </ThemeProvider>
+        {/*</ThemeProvider>*/}
         <Footer />
       </body>
     </html>
