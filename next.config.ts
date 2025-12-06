@@ -1,7 +1,10 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
+  // Note: cacheComponents (formerly experimental.ppr) is disabled due to compatibility
+  // issues with dynamic pages that require authentication and database access.
+  // This can be re-enabled once the pages are refactored to work with Suspense boundaries.
+  // cacheComponents: true,
   images: {
     remotePatterns: [
       {
