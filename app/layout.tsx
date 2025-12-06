@@ -1,6 +1,7 @@
 import { Toaster } from 'sonner';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Suspense } from 'react';
 //import { ThemeProvider } from '@/components/theme-provider';
 
 import './globals.css';
@@ -46,14 +47,16 @@ const THEME_COLOR_SCRIPT = `\
   updateThemeColor();
 })();`;
 */
-export default async function RootLayout({
+async function HeaderWithAuth() {
+  const session = await auth();
+  return <Header user={session?.user} />;
+}
+
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  const session = await auth();
-
   return (
     <html
       lang="en"
@@ -74,7 +77,9 @@ export default async function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/uyv7hge.css" />
       </head>
       <body className={`${inter.variable} antialiased`}>
-        <Header user={session?.user} />
+        <Suspense fallback={<Header />}>
+          <HeaderWithAuth />
+        </Suspense>
         {/*
         <ThemeProvider
           attribute="class"
