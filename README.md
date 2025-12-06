@@ -13,7 +13,7 @@ Kite AI is built for career changers. The platform offers:
 
 ## Features
 
-- **Next.js App Router:** Advanced routing and performance with React Server Components and Server Actions.
+- **Next.js 16:** Built with Next.js 16.0.7, featuring advanced routing and performance with React Server Components and Server Actions.
 - **AI SDK Integration:** Unified API for generating text, structured plans, and actionable suggestions using LLMs (xAI, OpenAI, and more).
 - **shadcn/ui & Tailwind CSS:** Accessible, flexible, and beautiful UI components.
 - **Data Persistence:** Save your chat history, plans, and progress securely.
